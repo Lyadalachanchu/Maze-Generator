@@ -36,7 +36,7 @@ class Cell():
 		y_pos = self.y*self.w
 
 		if(self.visited):
-			pygame.draw.rect(gameDisplay,(27,87,35),(x_pos,y_pos,w,w))
+			pygame.draw.rect(gameDisplay,(self.x*2.3, self.y*2.3, self.y*2.3),(x_pos,y_pos,w,w))
 		#pygame.draw.rect(gameDisplay,(255,255,255),(x_pos,y_pos,w,w), 1)
 		if (self.walls[0]):
 		#Top
@@ -113,7 +113,7 @@ if __name__ == "__main__":
 	stack = []
 	
 	gameDisplay = pygame.display.set_mode((WIDTH,HEIGHT))
-	pygame.display.set_caption("Hello World!")
+	pygame.display.set_caption("Maze Generator")
 
 	for i in range(rows):
 		for j in range(cols):
